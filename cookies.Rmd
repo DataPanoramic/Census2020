@@ -1,0 +1,47 @@
+---
+title: "Price of Chocolate Cookies"
+author: "Joe Long"
+date: "12/24/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Average consumer prices of chocolate chip cookies
+
+Chocolate chip cookies, regardless of packaging size or type. Includes both organic and non-organic, as well as those with raisins, nuts, icing, or other similar features.
+
+Average consumer prices are calculated for household fuel, motor fuel, and food items from prices collected for the Consumer Price Index (CPI). Average prices are best used to measure the price level in a particular month, not to measure price change over time. It is more appropriate to use CPI index values for the particular item categories to measure price change.
+
+Prices, except for electricity, are collected monthly by BLS representatives in the 75 urban areas priced for the CPI. Electricity prices are collected for the BLS for the same 75 areas on a monthly basis by the Department of Energy using mail questionnaires. All fuel prices include applicable Federal, State, and local taxes; prices for natural gas and electricity also include fuel and purchased gas adjustments.
+
+For more information, please visit the Bureau of Labor Statistics.
+
+U.S. Bureau of Labor Statistics, Cookies, Chocolate Chip, Per Lb. (453.6 Gm) in U.S. City Average [APU0000702421], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/APU0000702421, December 24, 2019.
+
+Units:  U.S. Dollars, Not Seasonally Adjusted
+Frequency:  Monthly
+
+
+```{r }
+library(dplyr)
+library(readr)
+library(ggplot2)
+library(lubridate)
+
+cookies <- read.csv("C:/Users/Joe/Downloads/APU0000702421.csv",header = TRUE)
+
+
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
