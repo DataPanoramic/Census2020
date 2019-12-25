@@ -48,10 +48,10 @@ year_2018 <- filter(cookies,year==2018)
 
 # Change the color
 ggplot(data=year_2018, aes(x=as.factor(month), y=APU0000702421, group=1)) +
-  geom_line(color="red",linetype = "dashed")+
-  geom_point(color="red",size=2)+
+  geom_line(color="red")+
+  geom_point(color="#660000",size=2)+
   labs(title = "",
-       subtitle = "Consumer prices of chocolate chip cookies _ 2019 Monthly",
+       subtitle = "Consumer prices of chocolate chip cookies _ 2018 Monthly",
        caption = "Source:https://fred.stlouisfed.org/series/APU0000702421 ", 
        x = "Month", y = "Retail price") +
   theme_economist() + scale_fill_economist()
